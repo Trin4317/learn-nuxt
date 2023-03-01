@@ -1,5 +1,7 @@
-export default defineEventHandler(() => {
+export default defineEventHandler((event) => {
+    const { name } = getQuery(event)
+
     return {
-        message: `Hello from Nuxt Store.`
+        message: `Hello ${name} from Nuxt Store.`
     }
 })
